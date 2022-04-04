@@ -30,7 +30,7 @@ class VendorListFragment : Fragment() {
     ): View {
         binding = VendorListFragmentBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(VendorListViewModel::class.java)
-        val cmsApiRepo = (activity.application as App).cmsApiRepo
+        val cmsApiRepo = (activity?.application as App).cmsApiRepo
 
         val itemAdapter = ItemAdapter<com.mikepenz.fastadapter.ui.items.TwoLineItem>()
         val fastAdapter = FastAdapter.with(itemAdapter)

@@ -25,4 +25,9 @@ class CmsApiRepoTest{
 
         ).isEqualTo("")
     }
+
+    @Test
+    fun getVendors2() {
+        assertThat(CmsApiRepo().getVendorList().blockingFirst().body()).isNotEmpty()
+    }
 }
