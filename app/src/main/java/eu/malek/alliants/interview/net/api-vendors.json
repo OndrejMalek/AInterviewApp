@@ -1,0 +1,334 @@
+[
+  {
+    "id": 91.0,
+    "display_name": "Cali Dreamin' Charters Malibu",
+    "name": "Cali Dreamin' Charters",
+    "timezone": "America/Los_Angeles",
+    "description": "Cali Dreamin’ Charters is a private yacht company operated by Captain Shahrouz (Scott) Hagizadegan. Guests are driven from Malibu to Marina del Rey where their excursion begins. \n\nThe 54’ Galeon 500 fly is equipped with 3 staterooms, 2 bedrooms, full kitchen with bar and outdoor seating space. Cruise along the coast of California while enjoying delicious food and drink. \n\nPlease contact the concierge for availability and pricing. \n\n",
+    "created_at": "2021-06-11T11:12:04.648Z",
+    "updated_at": "2021-09-29T13:22:17.333Z",
+    "published_at": "2021-06-11T11:12:07.993Z",
+    "locale": "en",
+    "contact_info": {
+      "id": 230.0,
+      "website_url": "https://www.cadreamincharters.com"
+    },
+    "gallery": [],
+    "information_sections": [],
+    "prices": [],
+    "meet_the": {
+      "id": 14.0,
+      "title": "Meet the Captain",
+      "profiles": [
+        {
+          "id": 14.0,
+          "title": "Scott Hagizadegan",
+          "subtitle": "Captain",
+          "description": "Scott Hagizadegan has been chartering clients from all over the world for over 8 years now. He takes pride in his boat and does everything to make sure you have the experience of a lifetime. With a fully-licensed and experienced captain at the helm, your only job will be to sit back and relax.",
+          "image": {
+            "id": 1355.0,
+            "name": "Ryokan Malibu Cali Dreamin captain.jpg",
+            "alternativeText": "",
+            "caption": "",
+            "width": 229.0,
+            "height": 220.0,
+            "formats": {
+              "thumbnail": {
+                "ext": ".jpg",
+                "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/thumbnail_Ryokan_Malibu_Cali_Dreamin_captain_452121c62f.jpg",
+                "hash": "thumbnail_Ryokan_Malibu_Cali_Dreamin_captain_452121c62f",
+                "mime": "image/jpeg",
+                "name": "thumbnail_Ryokan Malibu Cali Dreamin captain.jpg",
+                "size": 5.42,
+                "width": 162.0,
+                "height": 156.0
+              }
+            },
+            "hash": "Ryokan_Malibu_Cali_Dreamin_captain_452121c62f",
+            "ext": ".jpg",
+            "mime": "image/jpeg",
+            "size": 6.04,
+            "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/Ryokan_Malibu_Cali_Dreamin_captain_452121c62f.jpg",
+            "provider": "aws-s3",
+            "created_at": "2021-06-11T11:10:33.439Z",
+            "updated_at": "2021-06-11T11:10:33.450Z"
+          }
+        }
+      ]
+    },
+    "stay_connected": [],
+    "hero_image": {
+      "id": 1354.0,
+      "name": "Ryokan Malibu Cali Dreamin.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 632.0,
+      "height": 421.0,
+      "formats": {
+        "small": {
+          "ext": ".jpg",
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/small_Ryokan_Malibu_Cali_Dreamin_205f2f61a4.jpg",
+          "hash": "small_Ryokan_Malibu_Cali_Dreamin_205f2f61a4",
+          "mime": "image/jpeg",
+          "name": "small_Ryokan Malibu Cali Dreamin.jpg",
+          "size": 34.15,
+          "width": 500.0,
+          "height": 333.0
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/thumbnail_Ryokan_Malibu_Cali_Dreamin_205f2f61a4.jpg",
+          "hash": "thumbnail_Ryokan_Malibu_Cali_Dreamin_205f2f61a4",
+          "mime": "image/jpeg",
+          "name": "thumbnail_Ryokan Malibu Cali Dreamin.jpg",
+          "size": 9.55,
+          "width": 234.0,
+          "height": 156.0
+        }
+      },
+      "hash": "Ryokan_Malibu_Cali_Dreamin_205f2f61a4",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 49.6,
+      "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/Ryokan_Malibu_Cali_Dreamin_205f2f61a4.jpg",
+      "provider": "aws-s3",
+      "created_at": "2021-06-11T11:08:07.128Z",
+      "updated_at": "2021-06-11T11:08:07.140Z"
+    },
+    "vendor_tags": [
+      {
+        "id": 1.0,
+        "title": "Nobu Recommends",
+        "created_at": "2020-10-23T11:55:10.761Z",
+        "updated_at": "2020-10-23T11:55:10.769Z",
+        "locale": "en"
+      },
+      {
+        "id": 97.0,
+        "title": "Experiences",
+        "created_at": "2021-06-11T09:28:26.511Z",
+        "updated_at": "2021-06-11T09:28:26.518Z",
+        "locale": "en"
+      }
+    ],
+    "localizations": [],
+    "property_id": 23.0
+  },
+  {
+    "id": 367.0,
+    "display_name": "Kite Eyewear London Shoreditch",
+    "name": "Kite Eyewear",
+    "timezone": "Europe/London",
+    "description": "\"Visionary design. Artisanal construction. Revolutionary ideas. Kite Eyewear is an independent British brand re-imagining the world of eyewear as you know it.\n\nThe most creative eyewear design team in the country, the most innovative production process using the most high-quality components. The most technologically advanced, sophisticated eye tests available. The most pioneering, personalised shopping experience out there.\n\nIt's time to see differently.\"",
+    "created_at": "2021-07-12T13:12:10.403Z",
+    "updated_at": "2021-10-25T13:56:13.548Z",
+    "published_at": "2021-07-12T13:12:12.902Z",
+    "locale": "en",
+    "contact_info": {
+      "id": 511.0,
+      "phone_number": "+442037287777",
+      "email_address": "support@kiteeyewear.com",
+      "website_url": "https://kiteeyewear.com",
+      "location": {
+        "id": 442.0,
+        "latitude": 51.52514,
+        "longitude": -0.07428
+      },
+      "address": {
+        "id": 458.0,
+        "address_line_1": "25 Redchurch St",
+        "city": "London",
+        "postal_code": "E2 7DJ",
+        "country": "United Kingdom"
+      }
+    },
+    "gallery": [
+      {
+        "id": 1459.0,
+        "image": {
+          "id": 2398.0,
+          "name": "NHLS Kite 2.jpg",
+          "alternativeText": "",
+          "caption": "",
+          "width": 1080.0,
+          "height": 912.0,
+          "formats": {
+            "large": {
+              "ext": ".jpg",
+              "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/large_NHLS_Kite_2_bc3f40f508.jpg",
+              "hash": "large_NHLS_Kite_2_bc3f40f508",
+              "mime": "image/jpeg",
+              "name": "large_NHLS Kite 2.jpg",
+              "size": 81.44,
+              "width": 1000.0,
+              "height": 844.0
+            },
+            "small": {
+              "ext": ".jpg",
+              "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/small_NHLS_Kite_2_bc3f40f508.jpg",
+              "hash": "small_NHLS_Kite_2_bc3f40f508",
+              "mime": "image/jpeg",
+              "name": "small_NHLS Kite 2.jpg",
+              "size": 29.29,
+              "width": 500.0,
+              "height": 422.0
+            },
+            "medium": {
+              "ext": ".jpg",
+              "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/medium_NHLS_Kite_2_bc3f40f508.jpg",
+              "hash": "medium_NHLS_Kite_2_bc3f40f508",
+              "mime": "image/jpeg",
+              "name": "medium_NHLS Kite 2.jpg",
+              "size": 53.45,
+              "width": 750.0,
+              "height": 633.0
+            },
+            "thumbnail": {
+              "ext": ".jpg",
+              "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/thumbnail_NHLS_Kite_2_bc3f40f508.jpg",
+              "hash": "thumbnail_NHLS_Kite_2_bc3f40f508",
+              "mime": "image/jpeg",
+              "name": "thumbnail_NHLS Kite 2.jpg",
+              "size": 7.08,
+              "width": 185.0,
+              "height": 156.0
+            }
+          },
+          "hash": "NHLS_Kite_2_bc3f40f508",
+          "ext": ".jpg",
+          "mime": "image/jpeg",
+          "size": 75.17,
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/NHLS_Kite_2_bc3f40f508.jpg",
+          "provider": "aws-s3",
+          "created_at": "2021-07-12T13:11:43.553Z",
+          "updated_at": "2021-07-12T13:11:43.561Z"
+        }
+      }
+    ],
+    "information_sections": [],
+    "opening_hours": {
+      "id": 382.0,
+      "monday": [],
+      "tuesday": [
+        {
+          "id": 2810.0,
+          "opens_at": "10:00:00",
+          "closes_at": "18:00:00",
+          "closes_late": false
+        }
+      ],
+      "wednesday": [
+        {
+          "id": 2811.0,
+          "opens_at": "10:00:00",
+          "closes_at": "18:00:00",
+          "closes_late": false
+        }
+      ],
+      "thursday": [
+        {
+          "id": 2812.0,
+          "opens_at": "10:00:00",
+          "closes_at": "18:00:00",
+          "closes_late": false
+        }
+      ],
+      "friday": [
+        {
+          "id": 2813.0,
+          "opens_at": "10:00:00",
+          "closes_at": "18:00:00",
+          "closes_late": false
+        }
+      ],
+      "saturday": [
+        {
+          "id": 2814.0,
+          "opens_at": "10:00:00",
+          "closes_at": "18:00:00",
+          "closes_late": false
+        }
+      ],
+      "sunday": []
+    },
+    "prices": [],
+    "stay_connected": [
+      {
+        "id": 542.0,
+        "type": "Instagram",
+        "url": "https://www.instagram.com/kiteeyewear/"
+      },
+      {
+        "id": 543.0,
+        "type": "Facebook",
+        "url": "https://www.facebook.com/kiteeyewear"
+      }
+    ],
+    "hero_image": {
+      "id": 2397.0,
+      "name": "NHLS Kite 1.jpg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 851.0,
+      "height": 315.0,
+      "formats": {
+        "small": {
+          "ext": ".jpg",
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/small_NHLS_Kite_1_f1feb167c7.jpg",
+          "hash": "small_NHLS_Kite_1_f1feb167c7",
+          "mime": "image/jpeg",
+          "name": "small_NHLS Kite 1.jpg",
+          "size": 20.11,
+          "width": 500.0,
+          "height": 185.0
+        },
+        "medium": {
+          "ext": ".jpg",
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/medium_NHLS_Kite_1_f1feb167c7.jpg",
+          "hash": "medium_NHLS_Kite_1_f1feb167c7",
+          "mime": "image/jpeg",
+          "name": "medium_NHLS Kite 1.jpg",
+          "size": 38.14,
+          "width": 750.0,
+          "height": 278.0
+        },
+        "thumbnail": {
+          "ext": ".jpg",
+          "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/thumbnail_NHLS_Kite_1_f1feb167c7.jpg",
+          "hash": "thumbnail_NHLS_Kite_1_f1feb167c7",
+          "mime": "image/jpeg",
+          "name": "thumbnail_NHLS Kite 1.jpg",
+          "size": 6.37,
+          "width": 245.0,
+          "height": 91.0
+        }
+      },
+      "hash": "NHLS_Kite_1_f1feb167c7",
+      "ext": ".jpg",
+      "mime": "image/jpeg",
+      "size": 39.11,
+      "url": "https://axp-cms-nobu-stack-strapiapps3bucket-172yzo4e7x7hw.s3.eu-west-1.amazonaws.com/NHLS_Kite_1_f1feb167c7.jpg",
+      "provider": "aws-s3",
+      "created_at": "2021-07-12T13:11:43.309Z",
+      "updated_at": "2021-07-12T13:11:43.322Z"
+    },
+    "vendor_tags": [
+      {
+        "id": 40.0,
+        "title": "Shopping",
+        "created_at": "2020-11-18T16:28:55.615Z",
+        "updated_at": "2020-11-18T16:28:55.620Z",
+        "locale": "en"
+      },
+      {
+        "id": 1.0,
+        "title": "Nobu Recommends",
+        "created_at": "2020-10-23T11:55:10.761Z",
+        "updated_at": "2020-10-23T11:55:10.769Z",
+        "locale": "en"
+      }
+    ],
+    "localizations": [],
+    "property_id": 6.0
+  }
+]
