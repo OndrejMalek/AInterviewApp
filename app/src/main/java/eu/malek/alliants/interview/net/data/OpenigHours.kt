@@ -1,40 +1,48 @@
 package eu.malek.alliants.interview.net.data
 
 import androidx.annotation.Keep
-import com.google.gson.annotations.SerializedName
 import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
 
 @Keep
 data class OpenigHours (
     @SerializedName("id")
     @Expose
-    var id: Long? = null,
+    val id: Long? = null,
 
     @SerializedName("monday")
     @Expose
-    var monday: List<DayOfWeekOpening>? = null,
+    val monday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("tuesday")
     @Expose
-    var tuesday: List<DayOfWeekOpening>? = null,
+    val tuesday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("wednesday")
     @Expose
-    var wednesday: List<DayOfWeekOpening>? = null,
+    val wednesday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("thursday")
     @Expose
-    var thursday: List<DayOfWeekOpening>? = null,
+    val thursday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("friday")
     @Expose
-    var friday: List<DayOfWeekOpening>? = null,
+    val friday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("saturday")
     @Expose
-    var saturday: List<DayOfWeekOpening>? = null,
+    val saturday: List<DayOfWeekOpening>? = null,
 
     @SerializedName("sunday")
     @Expose
-    var sunday: List<DayOfWeekOpening>? = null,
-)
+    val sunday: List<DayOfWeekOpening>? = null,
+
+
+){
+    fun getDaysOfWeek(): List<List<DayOfWeekOpening>?> {
+        return listOf(monday,tuesday,wednesday,thursday,friday,saturday,sunday)
+    }
+
+
+}

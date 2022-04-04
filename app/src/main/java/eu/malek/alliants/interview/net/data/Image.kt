@@ -8,61 +8,61 @@ import com.google.gson.annotations.SerializedName
 data class Image (
     @SerializedName("id")
     @Expose
-    var id: Float? = null,
+    val id: Float? = null,
 
     @SerializedName("name")
     @Expose
-    var name: String? = null,
+    val name: String = "",
 
     @SerializedName("alternativeText")
     @Expose
-    var alternativeText: String? = null,
+    val alternativeText: String = "",
 
     @SerializedName("caption")
     @Expose
-    var caption: String? = null,
+    val caption: String = "",
 
     @SerializedName("width")
     @Expose
-    var width: Float? = null,
+    val width: Float? = null,
 
     @SerializedName("height")
     @Expose
-    var height: Float? = null,
+    val height: Float? = null,
 
     @SerializedName("formats")
     @Expose
-    var formats: Formats? = null,
+    val formats: Formats? = null,
 
     @SerializedName("hash")
     @Expose
-    var hash: String? = null,
+    val hash: String = "",
 
     @SerializedName("ext")
     @Expose
-    var ext: String? = null,
+    val ext: String = "",
 
     @SerializedName("mime")
     @Expose
-    var mime: String? = null,
+    val mime: String = "",
 
     @SerializedName("size")
     @Expose
-    var size: Float? = null,
+    val size: Float? = null,
 
     @SerializedName("url")
     @Expose
-    var url: String? = null,
+    val url: String = "",
 
     @SerializedName("provider")
     @Expose
-    var provider: String? = null,
+    val provider: String = "",
 
     @SerializedName("created_at")
     @Expose
-    var createdAt: String? = null,
+    val createdAt: String = "",
 
     @SerializedName("updated_at")
     @Expose
-    var updatedAt: String? = null,
+    val updatedAt: String = "",
 )

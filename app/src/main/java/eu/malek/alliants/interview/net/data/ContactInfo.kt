@@ -8,9 +8,9 @@ import com.google.gson.annotations.SerializedName
 data class ContactInfo(
     @SerializedName("id")
     @Expose
-    var id: Float? = null,
+    val id: Float? = null,
 
     @SerializedName("website_url")
     @Expose
-    var websiteUrl: String? = null,
+    val websiteUrl: String = "",
 )

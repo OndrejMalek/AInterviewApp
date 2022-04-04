@@ -8,21 +8,21 @@ import com.google.gson.annotations.SerializedName
 data class Profile (
     @SerializedName("id")
     @Expose
-    var id: Float? = null,
+    val id: Float? = null,
 
     @SerializedName("title")
     @Expose
-    var title: String? = null,
+    val title: String = "",
 
     @SerializedName("subtitle")
     @Expose
-    var subtitle: String? = null,
+    val subtitle: String = "",
 
     @SerializedName("description")
     @Expose
-    var description: String? = null,
+    val description: String = "",
 
     @SerializedName("image")
     @Expose
-    var image: Image? = null,
+    val image: Image? = null,
 )

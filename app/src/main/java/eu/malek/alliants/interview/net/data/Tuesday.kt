@@ -8,17 +8,17 @@ import com.google.gson.annotations.SerializedName
 data class Tuesday (
     @SerializedName("id")
     @Expose
-    var id: Long? = null,
+    val id: Long? = null,
 
     @SerializedName("opens_at")
     @Expose
-    var opensAt: String? = null,
+    val opensAt: String = "",
 
     @SerializedName("closes_at")
     @Expose
-    var closesAt: String? = null,
+    val closesAt: String = "",
 
     @SerializedName("closes_late")
     @Expose
-    var closesLate: Boolean? = null,
+    val closesLate: Boolean? = null,
 )

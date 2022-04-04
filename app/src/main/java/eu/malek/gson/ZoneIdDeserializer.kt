@@ -6,19 +6,22 @@ import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
 import java.lang.reflect.Type
-import java.time.LocalTime
-import java.time.format.DateTimeParseException
+import java.time.DateTimeException
+import java.time.ZoneId
+
+
+val DEFAULT_ZONE_ID: ZoneId = ZoneId.of("Europe/London")
+
 
 /**
- * serialize format: 2022-01-26T16:25:00+01:00
+ * deserialize format: "Europe/London"
  */
-//TODO How to handle malformed data
 @Keep
-class LocalTimeDeserializer : JsonDeserializer<LocalTime> {
+class ZoneIdDeserializer : JsonDeserializer<ZoneId> {
 
 
     @Throws(JsonParseException::class)
-    override fun deserialize(json: JsonElement, typeOfT: Type, context: JsonDeserializationContext): LocalTime {
+    override fun deserialize(json: JsonElement, typeOfT: Type, context: JsonDeserializationContext): ZoneId {
         val jsonString: String = try {
             json.asJsonPrimitive.asString
         } catch (e: IllegalStateException) {
@@ -26,9 +29,9 @@ class LocalTimeDeserializer : JsonDeserializer<LocalTime> {
         }
 
         return try {
-            LocalTime.parse(jsonString)
-        } catch (e: DateTimeParseException) {
-            throw JsonParseException(e)
+            ZoneId.of(jsonString)
+        } catch (e: DateTimeException) {
+            return DEFAULT_ZONE_ID
         }
     }
 }

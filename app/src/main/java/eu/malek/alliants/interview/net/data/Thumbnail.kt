@@ -8,33 +8,33 @@ import com.google.gson.annotations.SerializedName
 data class Thumbnail (
     @SerializedName("ext")
     @Expose
-    var ext: String? = null,
+    val ext: String = "",
 
     @SerializedName("url")
     @Expose
-    var url: String? = null,
+    val url: String = "",
 
     @SerializedName("hash")
     @Expose
-    var hash: String? = null,
+    val hash: String = "",
 
     @SerializedName("mime")
     @Expose
-    var mime: String? = null,
+    val mime: String = "",
 
     @SerializedName("name")
     @Expose
-    var name: String? = null,
+    val name: String = "",
 
     @SerializedName("size")
     @Expose
-    var size: Float? = null,
+    val size: Float? = null,
 
     @SerializedName("width")
     @Expose
-    var width: Float? = null,
+    val width: Float? = null,
 
     @SerializedName("height")
     @Expose
-    var height: Float? = null,
+    val height: Float? = null,
 )

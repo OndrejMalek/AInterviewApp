@@ -9,16 +9,16 @@ import java.time.LocalTime
 data class DayOfWeekOpening(
     @SerializedName("closes_late")
     @Expose
-    var closesLate: Boolean? = null,
+    val closesLate: Boolean? = null,
     @SerializedName("closes_at")
     @Expose
-    var closesAt: LocalTime? = null,
+    val closesAt: LocalTime? = null,
     @SerializedName("opens_at")
     @Expose
-    var opensAt: LocalTime? = null,
+    val opensAt: LocalTime? = null,
     @SerializedName("id")
     @Expose
-    var id: Long? = null
+    val id: Long? = null
 ) {
 
 }

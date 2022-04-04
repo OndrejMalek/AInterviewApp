@@ -3,66 +3,72 @@ package eu.malek.alliants.interview.net.data
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.time.ZoneId
+
+private val DEFAULT_TIME_ZONE_ID = ZoneId.of("Europe/London")
 
 @Keep
 class Vendor(
     @SerializedName("id")
     @Expose
-    var id: Float? = null,
+    val id: Float? = null,
 
     @SerializedName("display_name")
     @Expose
-    var displayName: String? = null,
+    val displayName: String = "",
 
     @SerializedName("name")
     @Expose
-    var name: String? = null,
+    val name: String = "",
 
     @SerializedName("timezone")
     @Expose
-    var timezone: String? = null,
+    val timezone: ZoneId = DEFAULT_TIME_ZONE_ID,
 
     @SerializedName("description")
     @Expose
-    var description: String? = null,
+    val description: String = "",
 
     @SerializedName("created_at")
     @Expose
-    var createdAt: String? = null,
+    val createdAt: String = "",
 
     @SerializedName("updated_at")
     @Expose
-    var updatedAt: String? = null,
+    val updatedAt: String = "",
 
     @SerializedName("published_at")
     @Expose
-    var publishedAt: String? = null,
+    val publishedAt: String = "",
 
     @SerializedName("opening_hours")
     @Expose
-    var openingHours: OpenigHours? = null,
+    val openingHours: OpenigHours? = null,
 
     @SerializedName("locale")
     @Expose
-    var locale: String? = null,
+    val locale: String = "",
 
     @SerializedName("contact_info")
     @Expose
-    var contactInfo: ContactInfo? = null,
+    val contactInfo: ContactInfo? = null,
 
     @SerializedName("gallery")
     @Expose
-    var gallery: List<Any>? = null,
+    val gallery: List<Any>? = null,
 
     @SerializedName("information_sections")
     @Expose
-    var informationSections: List<Any>? = null,
+    val informationSections: List<Any>? = null,
 
     @SerializedName("prices")
     @Expose
-    var prices: List<Any>? = null,
+    val prices: List<Any>? = null,
 
     @SerializedName("meet_the")
     @Expose
-    var meetThe: MeetThe? = null,
-)
+    val meetThe: MeetThe? = null,
+){
+
+}
+

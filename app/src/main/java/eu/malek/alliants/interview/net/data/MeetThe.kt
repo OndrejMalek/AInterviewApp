@@ -8,13 +8,13 @@ import com.google.gson.annotations.SerializedName
 data class MeetThe(
     @SerializedName("id")
     @Expose
-    var id: Float? = null,
+    val id: Float? = null,
 
     @SerializedName("title")
     @Expose
-    var title: String? = null,
+    val title: String = "",
 
     @SerializedName("profiles")
     @Expose
-    var profiles: List<Profile>? = null,
+    val profiles: List<Profile>? = null,
 )

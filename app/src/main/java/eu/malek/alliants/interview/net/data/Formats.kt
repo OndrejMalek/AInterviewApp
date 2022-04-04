@@ -8,5 +8,5 @@ import com.google.gson.annotations.SerializedName
 data class Formats (
     @SerializedName("thumbnail")
     @Expose
-    var thumbnail: Thumbnail? = null,
+    val thumbnail: Thumbnail? = null,
 )
