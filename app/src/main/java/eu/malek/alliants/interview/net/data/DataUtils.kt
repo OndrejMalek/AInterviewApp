@@ -1,5 +1,6 @@
 package eu.malek.alliants.interview.net.data
 
+import eu.malek.gson.DEFAULT_ZONE_ID
 import java.time.LocalTime
 import java.time.ZonedDateTime
 
@@ -8,7 +9,7 @@ enum class IsOpen{
 }
 
 fun isVendorOpenNow(vendor: Vendor): IsOpen {
-    return isVendorOpen(vendor, ZonedDateTime.now(vendor.timezone))
+    return isVendorOpen(vendor, ZonedDateTime.now(vendor.timezone ?: DEFAULT_ZONE_ID))
 }
 
 fun isVendorOpen(
@@ -16,7 +17,7 @@ fun isVendorOpen(
     zonedDateTime: ZonedDateTime,
 ): IsOpen {
     return if (vendor.openingHours?.getDaysOfWeek() == null) {
-        IsOpen.UNKNOWN //TODO what if there is no time ?
+        IsOpen.UNKNOWN //TODO what if there is no time ?,  Missing timezone?
     } else {
 
         vendor.openingHours.getDaysOfWeek().get(zonedDateTime.dayOfWeek.value - 1)
@@ -37,7 +38,8 @@ fun isOpeningHoursOpened(
 ): IsOpen {
     return openingsInDay
         .any { openingInDay ->
-            if (openingInDay.closesAt != null || openingInDay.opensAt != null) {
+            //TODO sometimes time is missing
+            if (openingInDay.closesAt != null && openingInDay.opensAt != null) {
                 isOpeningHoursOpened(openingInDay, now)
             } else {
                 false

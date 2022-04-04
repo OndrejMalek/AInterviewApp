@@ -4,7 +4,6 @@ import com.google.common.truth.Truth.assertThat
 import com.google.gson.GsonBuilder
 import org.junit.Test
 import java.time.LocalTime
-import java.time.format.DateTimeParseException
 
 
 class LocalTimeDeserializerTest{
@@ -21,7 +20,7 @@ class LocalTimeDeserializerTest{
             gson.fromJson("""{time=null}""",TestObj::class.java)).isEqualTo(TestObj(null))
     }
 
-    @Test(expected = DateTimeParseException::class)
+    @Test(expected = Exception::class)
     fun deserialize_expectExceptionOnMalformedData() {
         val gson = GsonBuilder()
             .registerTypeAdapter(LocalTime::class.java, LocalTimeDeserializer())

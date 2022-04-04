@@ -13,15 +13,15 @@ class DataUtilsKtTest {
     fun isVendorOpen() {
         val vendor = testVendor()
 
-
-
         assertThat(isVendorOpen(vendor, zonedMonday(vendor, 9, 11))).isEqualTo(IsOpen.OPEN)
         assertThat(isVendorOpen(vendor, zonedMonday(vendor, 9, 10))).isEqualTo(IsOpen.OPEN)
         assertThat(isVendorOpen(vendor, zonedMonday(vendor, 10, 10))).isEqualTo(IsOpen.CLOSE)
         assertThat(isVendorOpen(vendor, zonedMonday(vendor, 9, 9))).isEqualTo(IsOpen.CLOSE)
         assertThat(isVendorOpen(vendor, zonedMonday(vendor, 14, 30))).isEqualTo(IsOpen.OPEN)
 
-        assertThat(isVendorOpen(vendor, zonedFriday(vendor, 14, 30))).isEqualTo(IsOpen.CLOSE)
+        assertThat(isVendorOpen(vendor, zonedFriday(vendor, 14, 30))).isEqualTo(IsOpen.UNKNOWN)
+
+        //TODO cases when smt is null
     }
 
     private fun zonedMonday(vendor: Vendor, hours: Int, minutes: Int): ZonedDateTime {

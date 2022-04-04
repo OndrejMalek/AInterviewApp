@@ -4,6 +4,7 @@ import com.google.gson.GsonBuilder
 import eu.malek.alliants.interview.BuildConfig
 import eu.malek.alliants.interview.net.data.Vendor
 import eu.malek.gson.LocalTimeDeserializer
+import eu.malek.gson.ZoneIdDeserializer
 import io.reactivex.Observable
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,6 +14,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import java.time.LocalTime
+import java.time.ZoneId
 
 interface CmsApi {
 
@@ -31,6 +33,7 @@ interface CmsApi {
 
         fun createGson() = GsonBuilder()
             .registerTypeAdapter(LocalTime::class.java, LocalTimeDeserializer())
+            .registerTypeAdapter(ZoneId::class.java, ZoneIdDeserializer())
             .create()
 
         fun createHttpClient(

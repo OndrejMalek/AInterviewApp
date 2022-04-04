@@ -23,7 +23,7 @@ class Vendor(
 
     @SerializedName("timezone")
     @Expose
-    val timezone: ZoneId = DEFAULT_TIME_ZONE_ID,
+    val timezone: ZoneId? = DEFAULT_TIME_ZONE_ID,
 
     @SerializedName("description")
     @Expose

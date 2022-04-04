@@ -8,6 +8,7 @@ import eu.malek.alliants.interview.net.data.Vendor
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
+import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
 
@@ -22,12 +23,13 @@ class VendorListViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     private fun loadVendors() {
+        //Todo Check network state
         getCmsApiRepo().getVendorList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe { res ->
+            .subscribeBy (onNext = { res ->
                 vendors.value = res
-            }.addTo(compDis)
+            }).addTo(compDis)
     }
 
     override fun onCleared() {
@@ -35,6 +37,4 @@ class VendorListViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     private fun getCmsApiRepo() = this.getApplication<App>().cmsApiRepo
-
-
 }
