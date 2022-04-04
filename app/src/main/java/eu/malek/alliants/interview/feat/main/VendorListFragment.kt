@@ -1,4 +1,4 @@
-package eu.malek.alliants.interview.ui.main
+package eu.malek.alliants.interview.feat.main
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -8,24 +8,24 @@ import android.view.View
 import android.view.ViewGroup
 import eu.malek.alliants.interview.R
 
-class MainFragment : Fragment() {
+class VendorListFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = VendorListFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: VendorListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+        return inflater.inflate(R.layout.vendor_list_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(VendorListViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
