@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">InterviewApp</string>
+  <string name="loading_vendors">Loading vendors</string>
 </resources>
