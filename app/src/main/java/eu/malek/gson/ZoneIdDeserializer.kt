@@ -10,14 +10,12 @@ import java.time.DateTimeException
 import java.time.ZoneId
 
 
-val DEFAULT_ZONE_ID: ZoneId = ZoneId.of("Europe/London")
-
 
 /**
  * deserialize format: "Europe/London"
  */
 @Keep
-class ZoneIdDeserializer : JsonDeserializer<ZoneId> {
+class ZoneIdDeserializer(val defaultZoneId: ZoneId) : JsonDeserializer<ZoneId> {
 
 
     @Throws(JsonParseException::class)
@@ -31,7 +29,7 @@ class ZoneIdDeserializer : JsonDeserializer<ZoneId> {
         return try {
             ZoneId.of(jsonString)
         } catch (e: DateTimeException) {
-            return DEFAULT_ZONE_ID
+            return defaultZoneId
         }
     }
 }

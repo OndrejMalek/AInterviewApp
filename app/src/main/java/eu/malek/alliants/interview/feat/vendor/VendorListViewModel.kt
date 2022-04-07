@@ -1,10 +1,10 @@
-package eu.malek.alliants.interview.feat.main
+package eu.malek.alliants.interview.feat.vendor
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import eu.malek.alliants.interview.App
-import eu.malek.alliants.interview.net.data.Vendor
+import eu.malek.alliants.interview.net.data.vendor.Vendor
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo

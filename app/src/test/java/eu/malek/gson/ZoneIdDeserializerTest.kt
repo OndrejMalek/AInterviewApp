@@ -2,6 +2,7 @@ package eu.malek.gson
 
 import com.google.common.truth.Truth.assertThat
 import com.google.gson.GsonBuilder
+import eu.malek.alliants.interview.net.data.vendor.DEFAULT_TIME_ZONE_ID
 import org.junit.Test
 import java.time.ZoneId
 
@@ -11,7 +12,7 @@ class ZoneIdDeserializerTest{
     @Test
     fun deserialize() {
         val gson = GsonBuilder()
-            .registerTypeAdapter(ZoneId::class.java, ZoneIdDeserializer())
+            .registerTypeAdapter(ZoneId::class.java, ZoneIdDeserializer(DEFAULT_TIME_ZONE_ID))
             .create()
 
         assertThat(
@@ -20,7 +21,7 @@ class ZoneIdDeserializerTest{
             gson.fromJson("""{zoneId=null}""",TestObj::class.java)).isEqualTo(TestObj(null))
 
         assertThat(
-            gson.fromJson("""{zoneId=malformedddddd}""",TestObj::class.java)).isEqualTo(TestObj(DEFAULT_ZONE_ID))
+            gson.fromJson("""{zoneId=malformedddddd}""",TestObj::class.java)).isEqualTo(TestObj(DEFAULT_TIME_ZONE_ID))
     }
 
     data class TestObj(val zoneId : ZoneId?)

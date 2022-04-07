@@ -1,4 +1,4 @@
-package eu.malek.alliants.interview.feat.main
+package eu.malek.alliants.interview.feat.vendor
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,8 +12,8 @@ import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.mikepenz.fastadapter.ui.items.TwoLineItem
 import eu.malek.alliants.interview.databinding.VendorListFragmentBinding
-import eu.malek.alliants.interview.net.data.IsOpen
-import eu.malek.alliants.interview.net.data.Vendor
+import eu.malek.alliants.interview.net.data.vendor.IsOpen
+import eu.malek.alliants.interview.net.data.vendor.Vendor
 
 class VendorListFragment : Fragment() {
 
@@ -68,7 +68,7 @@ class VendorListFragment : Fragment() {
 
     private fun isVendorOpenNow(vendor: Vendor): String {
 
-        return when(eu.malek.alliants.interview.net.data.isVendorOpenNow(vendor)){
+        return when(eu.malek.alliants.interview.net.data.vendor.isVendorOpenNow(vendor)){
             IsOpen.UNKNOWN -> "n/a"
             IsOpen.OPEN -> "Opened"
             IsOpen.CLOSE -> "Closed"

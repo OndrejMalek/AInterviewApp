@@ -1,6 +1,5 @@
-package eu.malek.alliants.interview.net.data
+package eu.malek.alliants.interview.net.data.vendor
 
-import eu.malek.gson.DEFAULT_ZONE_ID
 import java.time.LocalTime
 import java.time.ZonedDateTime
 
@@ -9,7 +8,7 @@ enum class IsOpen{
 }
 
 fun isVendorOpenNow(vendor: Vendor): IsOpen {
-    return isVendorOpen(vendor, ZonedDateTime.now(vendor.timezone ?: DEFAULT_ZONE_ID))
+    return isVendorOpen(vendor, ZonedDateTime.now(vendor.timezone ?: DEFAULT_TIME_ZONE_ID))
 }
 
 fun isVendorOpen(

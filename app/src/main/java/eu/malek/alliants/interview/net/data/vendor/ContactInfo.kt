@@ -1,4 +1,4 @@
-package eu.malek.alliants.interview.net.data
+package eu.malek.alliants.interview.net.data.vendor
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose

@@ -1,8 +1,8 @@
-#Architecture#
+# Architecture
 MVVM, Retrofit, testing is done from ViewModel(excl.) to API, functional testing.
 
 
-#Notes#
+# Notes
 I've chosen MVVM mainly due to it is conventional and most devs are use to that. Which makes onboarding of juniors
 easier.
 

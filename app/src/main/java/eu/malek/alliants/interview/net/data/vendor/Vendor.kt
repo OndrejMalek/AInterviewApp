@@ -1,11 +1,11 @@
-package eu.malek.alliants.interview.net.data
+package eu.malek.alliants.interview.net.data.vendor
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import java.time.ZoneId
 
-private val DEFAULT_TIME_ZONE_ID = ZoneId.of("Europe/London")
+val DEFAULT_TIME_ZONE_ID = ZoneId.of("Europe/London")
 
 @Keep
 class Vendor(

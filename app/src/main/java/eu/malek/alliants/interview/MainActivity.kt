@@ -1,8 +1,8 @@
 package eu.malek.alliants.interview
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import eu.malek.alliants.interview.feat.main.VendorListFragment
+import androidx.appcompat.app.AppCompatActivity
+import eu.malek.alliants.interview.feat.vendor.VendorListFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -2,7 +2,8 @@ package eu.malek.alliants.interview.net
 
 import com.google.gson.GsonBuilder
 import eu.malek.alliants.interview.BuildConfig
-import eu.malek.alliants.interview.net.data.Vendor
+import eu.malek.alliants.interview.net.data.vendor.DEFAULT_TIME_ZONE_ID
+import eu.malek.alliants.interview.net.data.vendor.Vendor
 import eu.malek.gson.LocalTimeDeserializer
 import eu.malek.gson.ZoneIdDeserializer
 import io.reactivex.Observable
@@ -33,7 +34,7 @@ interface CmsApi {
 
         fun createGson() = GsonBuilder()
             .registerTypeAdapter(LocalTime::class.java, LocalTimeDeserializer())
-            .registerTypeAdapter(ZoneId::class.java, ZoneIdDeserializer())
+            .registerTypeAdapter(ZoneId::class.java, ZoneIdDeserializer(DEFAULT_TIME_ZONE_ID))
             .create()
 
         fun createHttpClient(
