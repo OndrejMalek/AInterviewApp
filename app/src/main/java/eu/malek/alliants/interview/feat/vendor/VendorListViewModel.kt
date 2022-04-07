@@ -24,7 +24,7 @@ class VendorListViewModel(application: Application) : AndroidViewModel(applicati
 
     private fun loadVendors() {
         //Todo Check network state
-        getCmsApiRepo().getVendorList()
+        appModule().cmsApiRepo.getVendorList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeBy (onNext = { res ->
@@ -36,5 +36,5 @@ class VendorListViewModel(application: Application) : AndroidViewModel(applicati
         compDis.dispose()
     }
 
-    private fun getCmsApiRepo() = this.getApplication<App>().cmsApiRepo
+    private fun appModule() = this.getApplication<App>().appModule
 }

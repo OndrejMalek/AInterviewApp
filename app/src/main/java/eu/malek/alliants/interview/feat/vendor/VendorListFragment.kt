@@ -14,6 +14,7 @@ import com.mikepenz.fastadapter.ui.items.TwoLineItem
 import eu.malek.alliants.interview.databinding.VendorListFragmentBinding
 import eu.malek.alliants.interview.net.data.vendor.IsOpen
 import eu.malek.alliants.interview.net.data.vendor.Vendor
+import eu.malek.alliants.interview.net.data.vendor.isVendorOpenNow
 
 class VendorListFragment : Fragment() {
 
@@ -31,19 +32,19 @@ class VendorListFragment : Fragment() {
         binding = VendorListFragmentBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(VendorListViewModel::class.java)
 
-        setupVendors()
+        setupVendors(binding)
 
         return binding.root
     }
 
-    private fun setupVendors() {
+    private fun setupVendors(binding: VendorListFragmentBinding) {
         val itemAdapter = ItemAdapter<TwoLineItem>()
         val fastAdapter = FastAdapter.with(itemAdapter)
         binding.recyclerView.setAdapter(fastAdapter)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
 
-        viewModel.vendors.observe(this.viewLifecycleOwner, Observer { res ->
+        viewModel.vendors.observe(viewLifecycleOwner, Observer { res ->
             if (res.isSuccessful) {
                     binding.recyclerView.visibility = View.VISIBLE
                     binding.dataStateMessage.visibility = View.GONE
@@ -51,7 +52,7 @@ class VendorListFragment : Fragment() {
                 val items = res.body()?.map { vendor ->
                     TwoLineItem()
                         .withName(vendor.name)
-                        .withDescription(isVendorOpenNow(vendor))
+                        .withDescription(isVendorOpenNowMessage(vendor))
                     //TODO withAvatar load with Glide library
                 }
 
@@ -66,9 +67,9 @@ class VendorListFragment : Fragment() {
         })
     }
 
-    private fun isVendorOpenNow(vendor: Vendor): String {
+    private fun isVendorOpenNowMessage(vendor: Vendor): String {
 
-        return when(eu.malek.alliants.interview.net.data.vendor.isVendorOpenNow(vendor)){
+        return when(isVendorOpenNow(vendor)){
             IsOpen.UNKNOWN -> "n/a"
             IsOpen.OPEN -> "Opened"
             IsOpen.CLOSE -> "Closed"
