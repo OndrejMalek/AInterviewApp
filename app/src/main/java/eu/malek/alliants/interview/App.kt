@@ -1,7 +1,6 @@
 package eu.malek.alliants.interview
 
 import android.app.Application
-import eu.malek.alliants.interview.net.CmsApiRepo
 import eu.malek.setDefaultErrorHandler
 
 class App : Application() {
@@ -11,14 +10,9 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        if (BuildConfig.DEBUG){
-            setDefaultErrorHandler(this)
-        }
+        setDefaultErrorHandler(this, BuildConfig.DEBUG)
 
         appModule = AppModule()
     }
 
-    class AppModule{
-        var cmsApiRepo : CmsApiRepo = CmsApiRepo()
-    }
 }
