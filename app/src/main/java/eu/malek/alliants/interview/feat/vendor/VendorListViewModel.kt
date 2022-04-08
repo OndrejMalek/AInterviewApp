@@ -14,7 +14,12 @@ import retrofit2.Response
 
 class VendorListViewModel(application: Application) : AndroidViewModel(application) {
 
-    val vendors: MutableLiveData<Response<List<Vendor>>> = MutableLiveData()
+    data class VendorListState(
+        val isLoading: Boolean = true,
+        val response: Response<List<Vendor>>? = null
+    )
+
+    val vendors: MutableLiveData<VendorListState> = MutableLiveData(VendorListState(true))
 
     private val compDis = CompositeDisposable()
 
@@ -27,8 +32,8 @@ class VendorListViewModel(application: Application) : AndroidViewModel(applicati
         appModule().cmsApiRepo.getVendorList()
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribeBy (onNext = { res ->
-                vendors.value = res
+            .subscribeBy(onNext = { res ->
+                vendors.value = VendorListState(false, res)
             }).addTo(compDis)
     }
 

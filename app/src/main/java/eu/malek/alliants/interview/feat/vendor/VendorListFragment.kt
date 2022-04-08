@@ -20,6 +20,27 @@ class VendorListFragment : Fragment() {
 
     companion object {
         fun newInstance() = VendorListFragment()
+
+        fun vendorsToModelAdapters(vendors: List<Vendor>?) =
+            vendors?.map { vendor ->
+                TwoLineItem()
+                    .withName(vendor.name)
+                    .withDescription(isVendorOpenNowMessage(vendor))
+                //TODO withAvatar load with Glide library
+            }
+
+        fun isVendorOpenNowMessage(vendor: Vendor): String {
+
+            return when(isVendorOpenNow(vendor)){
+                IsOpen.UNKNOWN -> "n/a"
+                IsOpen.OPEN -> "Opened"
+                IsOpen.CLOSE -> "Closed"
+            }
+        }
+
+        fun toVisibility(visible: Boolean) = if (visible) {
+            View.VISIBLE
+        } else View.GONE
     }
 
     private lateinit var binding: VendorListFragmentBinding
@@ -32,48 +53,42 @@ class VendorListFragment : Fragment() {
         binding = VendorListFragmentBinding.inflate(inflater, container, false)
         viewModel = ViewModelProvider(this).get(VendorListViewModel::class.java)
 
-        setupVendors(binding)
+        setupVendors(binding, viewModel)
 
         return binding.root
     }
 
-    private fun setupVendors(binding: VendorListFragmentBinding) {
+    private fun setupVendors(binding: VendorListFragmentBinding, viewModel: VendorListViewModel) {
         val itemAdapter = ItemAdapter<TwoLineItem>()
         val fastAdapter = FastAdapter.with(itemAdapter)
         binding.recyclerView.setAdapter(fastAdapter)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
 
-
-        viewModel.vendors.observe(viewLifecycleOwner, Observer { res ->
-            if (res.isSuccessful) {
-                    binding.recyclerView.visibility = View.VISIBLE
-                    binding.dataStateMessage.visibility = View.GONE
-
-                val items = res.body()?.map { vendor ->
-                    TwoLineItem()
-                        .withName(vendor.name)
-                        .withDescription(isVendorOpenNowMessage(vendor))
-                    //TODO withAvatar load with Glide library
-                }
-
+        viewModel.vendors.observe(viewLifecycleOwner, Observer { vendorsState ->
+            if (vendorsState.isLoading) {
+                showMessage(binding, true, "Loading vendors...")
+            } else if (vendorsState.response!!.isSuccessful) {
+                val items = vendorsToModelAdapters(vendorsState.response.body())
                 if (items != null) {
                     itemAdapter.set(items)
+                    showMessage(binding, false, "")
+                } else {
+                    itemAdapter.clear() //TODO behavior?
+                    showMessage(binding,true,"Unfortunately we do not have any vendors.")
                 }
-
             } else {
-                binding.recyclerView.visibility = View.GONE
-                binding.dataStateMessage.visibility = View.VISIBLE
+                showMessage(binding, true,"We can't load vendors now.")
             }
         })
     }
 
-    private fun isVendorOpenNowMessage(vendor: Vendor): String {
-
-        return when(isVendorOpenNow(vendor)){
-            IsOpen.UNKNOWN -> "n/a"
-            IsOpen.OPEN -> "Opened"
-            IsOpen.CLOSE -> "Closed"
-        }
+    private fun showMessage(binding: VendorListFragmentBinding, showMessageNotList: Boolean, message: String = "") {
+        binding.recyclerView.visibility = toVisibility(!showMessageNotList)
+        binding.dataStateMessage.visibility = toVisibility(showMessageNotList)
+        binding.dataStateMessage.text = message
     }
+
+
+
 
 }

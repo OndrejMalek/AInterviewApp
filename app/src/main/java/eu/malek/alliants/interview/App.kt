@@ -1,6 +1,7 @@
 package eu.malek.alliants.interview
 
 import android.app.Application
+import android.os.Debug
 import eu.malek.setDefaultErrorHandler
 
 class App : Application() {
@@ -9,6 +10,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        Debug.startMethodTracing()
 
         setDefaultErrorHandler(this, BuildConfig.DEBUG)
 

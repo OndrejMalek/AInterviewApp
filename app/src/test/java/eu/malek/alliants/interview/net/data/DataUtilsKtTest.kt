@@ -1,6 +1,7 @@
 package eu.malek.alliants.interview.net.data
 
 import com.google.common.truth.Truth.assertThat
+import eu.malek.alliants.interview.net.data.vendor.*
 import org.junit.Test
 import java.time.LocalTime
 import java.time.ZoneId
